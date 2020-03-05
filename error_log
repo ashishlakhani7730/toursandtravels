@@ -1,0 +1,4 @@
+[29-Mar-2018 21:08:10 Asia/Calcutta] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/shaktitourstrave/public_html/application/controllers/Home.php on line 26
+[29-Mar-2018 21:08:15 Asia/Calcutta] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/shaktitourstrave/public_html/application/controllers/Home.php on line 26
+[29-Mar-2018 22:52:46 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ']' in /home/shaktitourstrave/public_html/application/controllers/Contacts.php on line 32
+[29-Mar-2018 22:54:44 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ']' in /home/shaktitourstrave/public_html/application/controllers/Contacts.php on line 32

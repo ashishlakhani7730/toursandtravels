@@ -1,0 +1,256 @@
+a:2:{s:6:"expire";d:3415592168;s:7:"headers";a:0:{}}ENDCI--->﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shakti Tours Travels | About</title>
+<meta charset="utf-8">
+<meta name="keywords" content="Shakti Tours Travels, Travel Company India, Travel Company Gujarat, Travels Company Bhavnagar, Gujarat tour operator, Travel Agent in Bhavnagar, Travel Agency Gujarat, Tour operators Gujarat">
+<meta name="description" content="'SHAKTI TOURS TRAVELS' 'SHAKTI TOURS TRAVELS' is a Leading Tour Operator and Travel Agent established in 2005 having an India Travel Agency">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="http://localhost:8080/wamp/oshakti/assets/images/shakti.jpg" type="image/x-icon">
+<link rel="shortcut icon" href="http://localhost:8080/wamp/oshakti/assets/images/shakti.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/bootstrap-responsive.css" type="text/css" media="screen">    
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/style.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.js"></script>  
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/superfish.js"></script>
+
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.ui.totop.js"></script>
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116375231-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116375231-1');
+</script> -->
+</head>
+<body class="subpage">
+<div id="main">
+<!--
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+-->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'bn,en,es,fr,gu,hi,ja,nl,pa,pt,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class="top1 clearfix">
+<header><div class="logo_wrapper log"><a href="http://localhost:8080/wamp/oshakti/" class="logo"><img src="http://localhost:8080/wamp/oshakti/assets/images/logoo.png" alt=""></a></div></header>
+<div class="top2 clearfix">
+<div class="search-form-wrapper clearfix">
+	<div style="display:inline-block;margin:5px;visibility:hidden">
+		info
+	</div>
+	<div style="display:inline-block;float: right">
+	<div class="text-right" id="google_translate_element">
+	</div>
+	</div>
+</div>
+	
+<div class="menu_wrapper clearfix">
+<div class="navbar navbar_">
+	<div class="navbar-inner navbar-inner_">
+		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<div class="nav-collapse nav-collapse_ collapse">
+			<ul class="nav sf-menu clearfix">
+<li ><a href="http://localhost:8080/wamp/oshakti/">home</a></li>
+<li class="active"><a href="http://localhost:8080/wamp/oshakti/about-us.html">about us</a></li>
+<li class="sub-menu sub-menu-1"><a href="#">package</a>
+		<ul>
+			<li><a href="http://localhost:8080/wamp/oshakti/domestic-packages.html">Domestic package</a></li>	
+			<li><a href="http://localhost:8080/wamp/oshakti/international-packages.html">International package</a></li>						
+		</ul>						
+</li>
+<li class="sub-menu sub-menu-1"><a href="#">special package</a>
+		<ul>
+			<li><a href="http://localhost:8080/wamp/oshakti/spe-dom-package.html">Special Domestic package</a></li>	
+			<li><a href="http://localhost:8080/wamp/oshakti/spe-int-package.html">Special International package</a></li>						
+		</ul>						
+</li>
+<li ><a href="http://localhost:8080/wamp/oshakti/brochure.html">Brochure</a></li>											
+<li ><a href="http://localhost:8080/wamp/oshakti/gallery.html">gallery</a></li>											
+<li ><a href="http://localhost:8080/wamp/oshakti/contacts.html">contacts</a></li>	
+			</ul>
+		</div>
+	</div>
+</div>	
+</div>
+</div>	
+</div><div id="slider_wrapper">
+<div class="img"><img src="http://localhost:8080/wamp/oshakti/assets/pic/aboutus1.jpg" alt="shakti tours travles"></div>
+<img src="http://localhost:8080/wamp/oshakti/assets/images/camera_grad1.png" alt="shakti tours travles" class="grad2">
+<div class="slider_bot">
+<div class="page_title">About Us</div>
+<div class="breadcrumbs1">
+<div class="breadcrumbs1_inner"><a href="http://localhost:8080/wamp/oshakti/">Home Page</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;About Us</div>	
+</div>
+</div>
+</div>
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span12">
+<h1>About Us</h1>
+<div class="caption">
+	<h3>
+		Since 2005, SHAKTI TOURS & TRAVELS has been committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the India's wonders on the leisure travel side, and providing corporate travelers hi-touch services to facilitate their business travel needs.
+	</h3>
+</div>
+<h1>Vision</h1>
+<div class="caption">
+	<h3>
+		SHAKTI TOURS & TRAVELS wish to be the world's best travel service experience in your Life time. Our vision is to realize the tremendous potential of The World Tourism by providing eloquent services that consistently meet our customers' expectations & to discover, develop and deliver innovative travel services. 
+	</h3>
+</div>
+<h1>Mission</h1>
+<div class="caption">
+	<h3>
+		Our mission is to provide outstanding quality services, safest and the best value trips, so that we make every customer in every trip smile & to be the premier provider of targeted specialized tour products and related services to each & everyone.  
+	</h3>
+</div>
+</div>	
+</div>	
+</div>
+</div>
+<div id="content2">
+<div class="container">
+<div class="row">
+<div class="span12">
+<h2>Why Choose US</h2>
+<div class="date1 clearfix">
+	<div class="c1">1</div>
+	<div class="caption">
+		<h3>Knowledge & Experience</h3>
+		At Shakti Tours & Travels, we work hard to ensure we find you the most exciting, intriguing and amazing destinations and experiences that work within your budget.
+	</div>
+</div>
+<div class="date1 clearfix">
+	<div class="c1">2</div>
+	<div class="caption">
+		<h3>Personal Touch</h3>
+		Travel arrangements are designed to give you a tailored travel experience based on your interests and dreams.
+	</div>
+</div>
+<div class="date1 clearfix">
+	<div class="c1">3</div>
+	<div class="caption">
+		<h3>Hassle-free Travel Planning</h3>
+		With our extensive travel experience, we will work to make your planning and travel as care-free as possible giving you more enjoyment at your destination. 
+	</div>
+</div>
+<div class="date1 clearfix">
+	<div class="c1">4</div>
+	<div class="caption">
+		<h3>The High Level of Service</h3>
+		Our clients’ satisfaction is our priority. That is why we work only with the best transport companies, qualified tour-guides, hotels and restaurants. 
+	</div>
+</div>
+<div class="date1 clearfix">
+	<div class="c1">5</div>
+	<div class="caption">
+		<h3>Personal Approach to Each Client</h3>
+		We understand that there is no unique way to make a perfect journey that everyone will like because each person has his special needs and desires. We always listen to you first and then suggest the travel solution that is the best for you. 
+	</div>
+</div>
+<div class="date1 clearfix">
+	<div class="c1">6</div>
+	<div class="caption">
+		<h3>Vehicles</h3>
+		As we often travel on dirt roads into some fairly isolated locations, so reliable and safe vehicles are paramount. We operate luxury model bus services, each with great interior, full air-conditioning and superior suspension. We pride ourselves in having arguably the best tour vehicles in the Northern Territory with exceptional off-road capabilities and advanced safety features. 
+	</div>
+</div>
+<div class="date1 clearfix">
+	<div class="c1">7</div>
+	<div class="caption">
+		<h3>Openness and Availability</h3>
+		Wherever you need us, we are always there for you. You can easily contact us on e-mail or by phone, follow us on Facebook and other social media platforms. We are happy to have you as a part of our community. 
+	</div>
+</div>
+
+</div>
+</div>
+</div>	
+</div>	
+</div>
+﻿<div class="bot1">
+<div class="container">
+<div class="row">
+
+<div class="span4">
+	<div class="bot1_title">Contacts</div>
+	<div class="bot1_txt1">
+		Call for more information:<br>
+		<span>94 28 59 59 59</span><br>
+		<span>93 75 55 59 59</span><br>
+		<span>93 77 99 59 59</span><br>
+Surya Darshan Complex, Opp Tanna Travels
+<br>  Near Rubber Factory, Bhavnagar - 364001<br>
+Telephone-1: 0278 222 18 18<br>
+Telephone-2: 0278 300 18 18<br>
+E-mail: <a href="mailto:support@shaktitourstravels.com">support@shaktitourstravels.com</a>
+	</div>
+</div>
+
+<div class="span4">
+	<div class="bot1_title">Legal & Information</div>
+	<ul class="ul0">
+	  <li><a href="http://localhost:8080/wamp/oshakti/about-us.html">About Us</a></li>
+	  <li><a href="#">Privacy Policy</a></li>
+	  <li><a href="#">Terms & Conditions</a></li>	  
+	</ul>
+</div>
+
+<div class="span4">
+	<div class="bot1_title">follow us</div>
+	<div class="social_wrapper">
+		<ul class="social clearfix">
+		    <li><a href="https://www.facebook.com/Shakti-Travels-1785150524870513/" target="_blank"><img src="http://localhost:8080/wamp/oshakti/assets/images/facebook.png"></a></li>	
+			<li><a href="https://plus.google.com/u/0/100474407760536462196" target="_blank"><img src="http://localhost:8080/wamp/oshakti/assets/images/googleplus.png"></a></li>
+		</ul>
+	</div>
+</div>
+</div>	
+</div>	
+</div>
+
+<footer>
+<div class="container">
+<div class="row">
+<div class="span6">
+<div class="copyright">Copyright   © 2018 Shakti Tours & Travels. All rights reserved.</div>
+</div>
+<div class="span6 text-right">
+<span class="copyright">Develope By - Ashish Lakhani</span>
+</div>
+</div>	
+</div>	
+</div>	
+</footer>
+
+	
+</div>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5abf708fd7591465c709149f/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+</body>
+</html>

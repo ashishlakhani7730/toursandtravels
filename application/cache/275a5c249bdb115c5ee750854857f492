@@ -1,0 +1,594 @@
+a:2:{s:6:"expire";d:3415592130;s:7:"headers";a:0:{}}ENDCI--->﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shakti Tours Travels | Home</title>
+<meta charset="utf-8">
+<meta name="keywords" content="Shakti Tours Travels, Travel Company India, Travel Company Gujarat, Travels Company Bhavnagar, Gujarat tour operator, Travel Agent in Bhavnagar, Travel Agency Gujarat, Tour operators Gujarat">
+<meta name="description" content="'SHAKTI TOURS TRAVELS' 'SHAKTI TOURS TRAVELS' is a Leading Tour Operator and Travel Agent established in 2005 having an India Travel Agency">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="http://localhost:8080/wamp/oshakti/assets/images/shakti.jpg" type="image/x-icon">
+<link rel="shortcut icon" href="http://localhost:8080/wamp/oshakti/assets/images/shakti.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/bootstrap-responsive.css" type="text/css" media="screen">    
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/camera.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://localhost:8080/wamp/oshakti/assets/css/style.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.js"></script>  
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/superfish.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/camera.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.mobile.customized.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.caroufredsel.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/jquery.validate.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$(".travels").hide();
+	$("#sucess").hide();
+	$("#denger").hide();
+	
+	$("#mybutton").click(function(){
+		$(".travels").show();
+	}); 
+	
+	$("#contactbtn2").click(function(){
+		$(".travels").hide();
+	});
+	
+	setTimeout(function(){
+		$(".travels").hide();
+	}, 300000);
+	// camera
+	$('#camera_wrap').camera({
+		//thumbnails: true
+		autoAdvance			: true,		
+		mobileAutoAdvance	: true,
+		//fx					: 'simpleFade',
+		height: '51%',
+		hover: false,
+		loader: 'none',
+		navigation: true,
+		navigationHover: false,
+		mobileNavHover: false,
+		playPause: false,
+		pauseOnClick: false,
+		pagination			: true,
+		time: 7000,
+		transPeriod: 1000,
+		minHeight: '200px'
+	});
+
+		//	carouFredSel
+	$('#slider3 .carousel.main ul').carouFredSel({
+		auto: {
+			timeoutDuration: 2000					
+		},
+		responsive: true,
+		prev: '.prev3',
+		next: '.next3',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo"
+		},			
+		items: {
+        	width: '350',
+			height: 'variable',	//	optionally resize item-height
+			visible: {
+				min: 1,
+				max: 4
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			}
+	});
+	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+	function updateSizes_vat(){		
+		$('#slider3 .carousel.main ul').trigger("updateSizes");
+	}
+	updateSizes_vat();
+		
+	$("#contactbtn").on('click',function(){
+		if(!$("form[name='ajax-contact-form']").valid())
+		{
+			return false;
+		}
+		else
+		{
+			$.ajax({
+				url: 'http://localhost:8080/wamp/oshakti/Home/getestimate.html',
+				type: 'post',
+				dataType: 'json',
+				data: $('form#ajax-contact-form').serialize(),
+				success: function(json) {
+					
+					if(json.code == 1)
+					{
+						cleardata();
+						$("#sucess").html('<strong>'+json.message+'</strong>');
+						$("#sucess").show();
+						setTimeout(function(){
+							$("#sucess").hide();
+							$(".travels").hide();
+						}, 8000);
+					}
+					else if(json.code == 0)
+					{
+						cleardata();
+						$("#denger").html('<strong>'+json.message+'</strong>');
+						$("#denger").show();
+						setTimeout(function(){
+							$("#denger").hide();
+						}, 5000);
+					}
+				}
+			});
+		}
+	});
+	
+	$.validator.addMethod("regx1", function(value, element, regexpr) 
+  	{          
+    		return regexpr.test(value);
+  	}, "Not Valid value...");	
+
+	
+	  $("form[name='ajax-contact-form']").validate({
+	    onfocusout: function (element) {$(element).valid();},
+	    rules: {
+	      name: {
+			  		required: true,
+			  		regx1:  /^[A-z ]+$/,
+			  		minlength: 3,
+			  		maxlength: 30
+		  },
+	      phone: {
+	        		required: true,
+			  		regx1: /^((?!(0))[0-9]{10})$/,
+	        		minlength: 10,
+			  		maxlength: 10
+	      },
+		  content: {
+					required: true,
+	        		minlength: 10,
+			  		maxlength: 1024
+		  }
+	    },
+	    messages: {
+	    	name:  {
+		  				required: "!Please Enter Name",
+			  			regx1: "!Enter Only Charecter",
+						minlength: "!name minimum 3 Charecter",
+						maxlength: "!name maximum 30 Charecter"
+		  	},
+			phone: {
+						required: "!Please Enter Mobile No ",
+						regx1: "!Please Enter Valid Mobile No Without 0",
+						minlength:"!Please 10 Digit Mobile No",
+						maxlength:"!Please 10 Digit Mobile No"
+	      	},
+			content: {
+						required: "!Please Enter Message ",
+						minlength:"!Please Enter Minimum 10 Charecters",
+						maxlength:"!Please Enter Maximum 1024 Charecters"
+			}
+	    },
+	    errorElement : 'div',
+		errorPlacement: function(error, element) {
+		  var placement = $(element).data('error');
+		  if (placement) {
+			$(placement).append(error)
+		  } else {
+			error.insertAfter(element);
+		  }
+		}
+	  });
+	  
+	    function cleardata()
+		{
+			$("#inputName").val('');
+			$("#inputPhone").val('');
+			$("#inputMessage").val('');
+		}
+});
+</script>
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116375231-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116375231-1');
+</script> -->
+</head>
+<body class="main">
+<div id="main">
+<!--
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+-->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'bn,en,es,fr,gu,hi,ja,nl,pa,pt,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div class="top1 clearfix">
+<header><div class="logo_wrapper log"><a href="http://localhost:8080/wamp/oshakti/" class="logo"><img src="http://localhost:8080/wamp/oshakti/assets/images/logoo.png" alt=""></a></div></header>
+<div class="top2 clearfix">
+<div class="search-form-wrapper clearfix">
+	<div style="display:inline-block;margin:5px;visibility:hidden">
+		info
+	</div>
+	<div style="display:inline-block;float: right">
+	<div class="text-right" id="google_translate_element">
+	</div>
+	</div>
+</div>
+	
+<div class="menu_wrapper clearfix">
+<div class="navbar navbar_">
+	<div class="navbar-inner navbar-inner_">
+		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<div class="nav-collapse nav-collapse_ collapse">
+			<ul class="nav sf-menu clearfix">
+<li class="active"><a href="http://localhost:8080/wamp/oshakti/">home</a></li>
+<li ><a href="http://localhost:8080/wamp/oshakti/about-us.html">about us</a></li>
+<li class="sub-menu sub-menu-1"><a href="#">package</a>
+		<ul>
+			<li><a href="http://localhost:8080/wamp/oshakti/domestic-packages.html">Domestic package</a></li>	
+			<li><a href="http://localhost:8080/wamp/oshakti/international-packages.html">International package</a></li>						
+		</ul>						
+</li>
+<li class="sub-menu sub-menu-1"><a href="#">special package</a>
+		<ul>
+			<li><a href="http://localhost:8080/wamp/oshakti/spe-dom-package.html">Special Domestic package</a></li>	
+			<li><a href="http://localhost:8080/wamp/oshakti/spe-int-package.html">Special International package</a></li>						
+		</ul>						
+</li>
+<li ><a href="http://localhost:8080/wamp/oshakti/brochure.html">Brochure</a></li>											
+<li ><a href="http://localhost:8080/wamp/oshakti/gallery.html">gallery</a></li>											
+<li ><a href="http://localhost:8080/wamp/oshakti/contacts.html">contacts</a></li>	
+			</ul>
+		</div>
+	</div>
+</div>	
+</div>
+</div>	
+</div><div id="slider_wrapper">
+	<div id="slider" class="clearfix">
+		<div id="camera_wrap">
+			<div data-src="http://localhost:8080/wamp/oshakti/assets/pic/banner-5.jpg">    
+			</div>
+			
+			<div data-src="http://localhost:8080/wamp/oshakti/assets/pic/banner.jpg">    
+			</div>
+			
+			<div data-src="http://localhost:8080/wamp/oshakti/assets/pic/banner-1.jpg">    
+			</div>
+
+			<div data-src="http://localhost:8080/wamp/oshakti/assets/pic/banner-2.jpg">
+			</div>
+
+			<div data-src="http://localhost:8080/wamp/oshakti/assets/pic/banner-3.jpg">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="slogan1">
+<div class="container">
+<div class="row">
+<div class="span2">
+<img src="http://localhost:8080/wamp/oshakti/assets/images/airline1.gif" alt="shakti tours travles">
+</div>
+<div class="span8">
+<div class="slogan1_inner">
+<div class="txt1">Start Your Trip With Us</div>	
+<div class="txt2">Popular destinations and greate customer service</div>
+<div class="txt3"></div>
+<div class="txt4 clearfix" style="cursor:pointer"><a type="button" href="#content" id="mybutton" name="mybutton" class="find1">Estimate Request</a></div>
+</div>	
+</div>	
+<div class="span2">
+<img src="http://localhost:8080/wamp/oshakti/assets/images/airline2.gif" alt="shakti tours travles" width="300px" height="30px">
+</div>
+</div>	
+</div>	
+</div>
+<div id="content" class="travels hide">
+<div class="container">
+<div class="row">
+<div class="span12">
+<h2>
+Estimate Request</h2>
+<div id="sucess" class="alert alert-success">
+			
+</div>
+		
+<div id="denger" class="alert alert-danger">
+  
+</div>
+<div id="note"></div>
+<div id="fields">
+	<form id="ajax-contact-form" name="ajax-contact-form" method="post" class="form-horizontal" action="">
+		<div class="row">
+			<div class="span6">
+				<div class="control-group">
+				    <label class="control-label" for="inputName">Your full name:</label>
+				    <div class="controls">				      
+				      <input class="span6" type="text" id="inputName" name="name" placeholder="Your full name:" >
+				    </div>
+				</div>				
+			</div>			
+			<div class="span6">
+				<div class="control-group">
+				    <label class="control-label" for="inputPhone">Mobile number:</label>
+				    <div class="controls">				      
+				      <input class="span6" type="text" id="inputPhone" name="phone" placeholder="Mobile number:" >
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<div class="control-group">
+				    <label class="control-label" for="inputMessage">Message:</label>
+				    <div class="controls">				      				      
+				      <textarea class="span12" id="inputMessage" name="content" placeholder="Message:I Want To Hire Full Bus What Is The Price? &#x0a;I Would Like To Start My Journey From ..."></textarea>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<button type="button" name="contactbtn" id="contactbtn" class="submit">Submit</button>
+		<button type="button" name="contactbtn" id="contactbtn2" class="submit">Close</button>
+	</form>
+</div>	
+</div>	
+</div>
+</div>
+</div>
+<div id="slider3_wrapper">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div id="slider3">
+<div class="slider3-title">Destinations Services</div>	
+<a class="prev3" href="#"></a>
+<a class="next3" href="#"></a>	
+<div class="carousel-box row">
+	<div class="inner span12">			
+		<div class="carousel main">
+			<ul>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/Adventure-Activities-in-Solang-Valley-Manali.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Himachal 								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/travel-tourism-kerala-background-houseboat-on-kerala-backwaters-kerala-india-image-id-215715742-1422972904-KadQ.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Kerla								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/manali.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Manali								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/Hawa-Mahal.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Royal Rajasthan								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/haridwar.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Haridwar								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/Goa_Goa_Vagator_The-beautiful-Vagator-beach-in-Goa.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Goa								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="thumb-carousel banner1">
+						<div class="thumbnail clearfix">
+							<a href="#">
+								<figure>
+									<img src="http://localhost:8080/wamp/oshakti/uploads/agra-amarnath-story_647_071117054944.jpg" alt="shakti tours travles">
+									<em></em>
+								</figure>
+								<div class="caption">
+									Amarnath Yatra								</div>								
+							</a>								
+						</div>
+					</div>
+				</li>
+																											
+			</ul>
+		</div>
+	</div>
+</div>
+</div>	
+</div>	
+</div>	
+</div>	
+</div>
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span9 clearfix">
+<h1>Welcome to Shakti Tours & Travels</h1>
+<h3>We are a full-service travel agency, catering to everyone from backpackers to luxury travelers. We love to share the beauty and culture of india with the world.We pride ourselves on our customer service and are available 24*7.</h3>
+<h3>We are providing our satisfactory service to our customers. We arrange tours in many place in india of domestic, inbound & pilgrim tourists by taking under-consideration the desire & budget of a tourist.</h3>
+<h3>We are know for our luxurious safe service at affordable rates. We provide quality comforts in 2X2, 2X1(56 seats) and sleeping luxurious, A/C & Non A/C. Coaches Services. We are always committed to customer’s safety and benefits. </h3>
+<div class="thumb1">
+	<div class="thumbnail clearfix">
+		<figure class="img-polaroid"><img src="http://localhost:8080/wamp/oshakti/assets/pic/bus.jpg" alt="shakti tours travles"></figure>
+		<figure class="img-polaroid"><img src="http://localhost:8080/wamp/oshakti/assets/pic/bus-2.jpg" alt="shakti tours travles"></figure>
+		<div class="caption">
+			<p>
+				
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+<div class="span3">
+<h2>We Arrange Tour</h2>
+<ul class="ul1">
+  <li><a >College / School Tour</a></li>
+  <li><a >Family Tour</a></li>
+  <li><a >Group Tour</a></li>
+  <li><a >Couple Tour</a></li>
+  <li><a >Individual Tour</a></li>	
+  <li><a >Corporate Tour</a></li>
+  <li><a >International & Domestic Tour</a></li>
+  <li><a >Marriage Function Also...</a></li>  
+</ul>
+<h2>By Transportation</h2>
+<ul class="ul1">
+  <li><a >Bus</a></li>
+  <li><a >Train</a></li>
+  <li><a >Airplane</a></li>  
+</ul>
+</div>	
+</div>	
+</div>	
+</div>
+﻿<div class="bot1">
+<div class="container">
+<div class="row">
+
+<div class="span4">
+	<div class="bot1_title">Contacts</div>
+	<div class="bot1_txt1">
+		Call for more information:<br>
+		<span>94 28 59 59 59</span><br>
+		<span>93 75 55 59 59</span><br>
+		<span>93 77 99 59 59</span><br>
+Surya Darshan Complex, Opp Tanna Travels
+<br>  Near Rubber Factory, Bhavnagar - 364001<br>
+Telephone-1: 0278 222 18 18<br>
+Telephone-2: 0278 300 18 18<br>
+E-mail: <a href="mailto:support@shaktitourstravels.com">support@shaktitourstravels.com</a>
+	</div>
+</div>
+
+<div class="span4">
+	<div class="bot1_title">Legal & Information</div>
+	<ul class="ul0">
+	  <li><a href="http://localhost:8080/wamp/oshakti/about-us.html">About Us</a></li>
+	  <li><a href="#">Privacy Policy</a></li>
+	  <li><a href="#">Terms & Conditions</a></li>	  
+	</ul>
+</div>
+
+<div class="span4">
+	<div class="bot1_title">follow us</div>
+	<div class="social_wrapper">
+		<ul class="social clearfix">
+		    <li><a href="https://www.facebook.com/Shakti-Travels-1785150524870513/" target="_blank"><img src="http://localhost:8080/wamp/oshakti/assets/images/facebook.png"></a></li>	
+			<li><a href="https://plus.google.com/u/0/100474407760536462196" target="_blank"><img src="http://localhost:8080/wamp/oshakti/assets/images/googleplus.png"></a></li>
+		</ul>
+	</div>
+</div>
+</div>	
+</div>	
+</div>
+
+<footer>
+<div class="container">
+<div class="row">
+<div class="span6">
+<div class="copyright">Copyright   © 2018 Shakti Tours & Travels. All rights reserved.</div>
+</div>
+<div class="span6 text-right">
+<span class="copyright">Develope By - Ashish Lakhani</span>
+</div>
+</div>	
+</div>	
+</div>	
+</footer>
+
+	
+</div>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="http://localhost:8080/wamp/oshakti/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5abf708fd7591465c709149f/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+</body>
+</html>
